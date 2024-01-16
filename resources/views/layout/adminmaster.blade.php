@@ -259,7 +259,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="alert.html">All Customer</a></li>
-                                    <li><a class="nav-link" href="badge.html">Online Customer</a></li>
+                                    <li><a class="nav-link" href="{{route('create_coustomer')}}">Online Customer</a></li>
                                     <li><a class="nav-link" href="breadcrumb.html">Offline Customer</a></li>
                                     <li><a class="nav-link" href="buttons.html">Free Customer</a></li>
                                     <li><a class="nav-link" href="collapse.html">Left Custormer</a></li>
