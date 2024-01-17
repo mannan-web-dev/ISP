@@ -15,6 +15,7 @@
 
         <!-- Custom style CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/table.css') }}">
         <link rel='shortcut icon' type='image/x-icon' href='{{ asset('assets/img/favicon.ico') }}' />
     </head>
 
@@ -28,7 +29,7 @@
                     <div class="form-inline mr-auto">
                         <ul class="navbar-nav mr-3">
                             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-                                                    collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                            collapse-btn"> <i data-feather="align-justify"></i></a></li>
                             <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                                 <i data-feather="maximize"></i>
                             </a></li>
@@ -259,7 +260,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="alert.html">All Customer</a></li>
-                                    <li><a class="nav-link" href="{{route('create_coustomer')}}">Online Customer</a></li>
+                                    <li><a class="nav-link" href="{{route('onlineCustomer')}}">Online Customer</a></li>
                                     <li><a class="nav-link" href="breadcrumb.html">Offline Customer</a></li>
                                     <li><a class="nav-link" href="buttons.html">Free Customer</a></li>
                                     <li><a class="nav-link" href="collapse.html">Left Custormer</a></li>

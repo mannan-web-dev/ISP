@@ -18,6 +18,8 @@ class AdminController extends Controller
         return view('auth.preLogin');
     }
 
+
+    //admin 
     public function adminLogin()
     {
         return view('auth.admin_login');
@@ -27,6 +29,9 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+
+
+    //seller 
 
     public function sellerLogin()
     {
