@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OfflineCustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
@@ -30,7 +31,7 @@ Route::post('/customer/store', [AuthController::class, 'customerLoginStore']);
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'adminDashboard']);
-    //Online customer
+    //Online customer--blade
     Route::get('/admin/custmoer', [OnlineCustomerController::class, 'onlineCustomer'])->name('onlineCustomer');
     Route::get('/admin/custmoer/create', [OnlineCustomerController::class, 'onlineCustomerCreate'])->name('onlineCustomerCreate');
     Route::post('/admin/custmoer/create_form', [OnlineCustomerController::class, 'onlineCustCreate'])->name('onlineCustCreate');
@@ -39,8 +40,18 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/admin/delete/{id}', [OnlineCustomerController::class, 'delete'])->name('delete');
 
 
+    //offline customer--api
+    Route::get('/admin/offlineCustomer/List', [OfflineCustomerController::class, 'customerList']);
+    Route::post('/admin/offlineCustomer', [OfflineCustomerController::class, 'addCust']);
+    Route::get('/admin/offlineCustomerView', [OfflineCustomerController::class, 'customerView']);
+    Route::post('/admin/offlineCustomer/edit', [OfflineCustomerController::class, 'updateCust']);
+    Route::post('/admin/offlineCustomer/delete', [OfflineCustomerController::class, 'deleteCust']);
 
+
+
+    //seller section 
     Route::get('/seller/dashboard', [AdminController::class, 'sellerDashboard']);
+     //customer section 
     Route::get('/customer/dashboard', [AdminController::class, 'customerDashboard']);
 
     // For Designation Route
